@@ -1,7 +1,9 @@
 # Node DB4 Module Project
-
+//alex tran
 ## Instructions
-
+//npx knex init
+//npx knex migrate:make recipe
+// npx knex seed:make 
 ### Task 1: Project Setup
 
 - [ ] Fork and clone the repository.
