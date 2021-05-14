@@ -17,12 +17,24 @@ async function getRecipeById(id) {
             const morestuff = {
                 step_number: stuff.step_number,
                 step_instructions: stuff.step_instruction,
+                ingredients : data.map(evenmore => {
+                    if (evenmore.steps_id === stuff.steps_id) {
+                        const moredata = {
+                            ingredient_id: evenmore.ingredient_id,
+                            ingredient_name: evenmore.ingredient_name,
+                            quantity:evenmore.quantity
+                        } 
+                        return moredata
+                    } else {
+                        return
+                    }
+                })
             }
             return morestuff
         })
     }
     console.log(result)
-    return data
+    // return data
     return result
 }
 
